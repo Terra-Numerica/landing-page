@@ -1,7 +1,7 @@
 export default [
     {
         title: 'Terra Numerica',
-        url: '/index.html',
+        url: 'index.html',
         dropdown: [
             {
                 title: 'Découvrir le projet',
@@ -47,7 +47,7 @@ export default [
     },
     {
         title: 'Événements',
-        url: '/events.html',
+        url: 'events.html',
         dropdown : []
     },
     {
