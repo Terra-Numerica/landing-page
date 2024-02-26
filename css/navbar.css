@@ -1,5 +1,9 @@
+/* =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+# Navbar
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= */
+
 nav {
-    background-color: #1A182D;
+    background-color: var(--darkBlue);
 }
 
 .nav-container {
@@ -24,6 +28,7 @@ nav {
 
 .nav-item {
     margin-left: 30px;
+    position: relative;
 }
 
 .nav-link {
@@ -31,10 +36,58 @@ nav {
     padding: 10px 15px;
     text-decoration: none;
     color: white;
-    font-size: 1em;
+    font-size: 1rem;
     transition: color 0.3s;
+    width: 100%;
+    text-align: center;
 }
 
-.nav-link:hover {
-    color: #24A1EB;
+.nav-link:hover,
+.nav-item:hover>.nav-link {
+    background: var(--yellow);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--yellow);
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    width: auto;
+    white-space: nowrap;
+}
+
+.nav-item:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-link {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+}
+
+.dropdown-link:hover {
+    background-color: var(--darkYellow);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: var(--yellow);
+}
+
+.dropdown-menu .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: var(--yellow);
+    margin-top: 2.8rem;
+}
+
+.dropdown-item:hover>.dropdown-menu {
+    display: block;
 }
